@@ -1,0 +1,91 @@
+<%- include('./partials/start.ejs') %>
+
+  <div class="main-panel container">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+              <h3 class="fw-bold mb-0">Movie Collection</h3>
+              <a href="/" class="btn btn-outline-primary d-flex align-items-center gap-2">
+                <i class="mdi mdi-view-grid"></i>
+                Client Side
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="w-100 mt-3">
+          <div class="card shadow-sm rounded-4 border-0">
+            <div class="card-body">
+              <div class="table-responsive rounded-3 overflow-hidden">
+                <table class="table align-middle table-hover">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-muted fw-semibold text-start">Movie</th>
+                      <th class="text-uppercase text-muted fw-semibold">Genre</th>
+                      <th class="text-uppercase text-muted fw-semibold">Movie Cover</th>
+                      <th class="text-uppercase text-muted fw-semibold">Release Date</th>
+                      <th class="text-uppercase text-muted fw-semibold">Rating</th>
+                      <th class="text-uppercase text-muted fw-semibold">Description</th>
+                      <th class="text-uppercase text-muted fw-semibold">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% movies.map((movie)=> { %>
+                      <tr>
+                        <td class="text-start fw-semibold">
+                          <%= movie.name %>
+                        </td>
+
+                        <td class="text-start text-muted">
+                          <%= movie.genre %>
+                        </td>
+
+                        <td class="text-center">
+                          <img src="/<%= movie.file %>" alt="<%= movie.name %>" class="rounded"
+                            style="width:80px;height:60px;object-fit:cover;">
+                        </td>
+
+                        <td class="text-start text-muted">
+                          <%= movie.date %>
+                        </td>
+
+                        <td class="text-center">
+                          <span class="badge rounded-pill bg-gradient-primary text-white px-3 py-2 fw-semibold">
+                            <%= movie.rating %>
+                          </span>
+                        </td>
+
+                        <td class="text-center">
+                          <a href="/admin/description/<%= movie._id %>" class="fw-semibold text-primary text-decoration-none">
+                            View  
+                          </a>
+                        </td>
+
+                        <td class="text-center">
+                          <a href="/admin/edit-movie/<%= movie._id %>"
+                            class="badge rounded-pill bg-gradient-primary text-white px-3 py-2 me-1">
+                            Edit
+                          </a>
+                          <a href="/admin/delete-movie/<%= movie._id %>" class="badge rounded-pill bg-gradient-primary text-white px-3 py-2">
+                            Delete
+                          </a>
+                        </td>
+                      </tr>
+                      <% }) %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <%- include('./partials/end.ejs') %>
