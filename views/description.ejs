@@ -1,22 +1,36 @@
 <%- include('./partials/start.ejs') %>
 
-    <section class="desc w-100">
-        <div class="container my-4">
-            <div class="movie-desc-card">
-                <div class="movie-poster">
-                    <img src="/<%= movies.file %>" alt="<%= movies.name %>">
-                </div>
-                <div class="movie-info">
-                    <h3 class="movie-title">
-                        <%= movies.name %>
-                    </h3>
-                    <p class="movie-description">
-                        <%= movies.des %>
-                    </p>
+<section class="movie-details-section">
+    <div class="container py-5">
+        <div class="row align-items-center movie-details-card">
+            <div class="col-md-4 text-center">
+                <img 
+                    src="/<%= movies.file %>" 
+                    alt="<%= movies.name %>" 
+                    class="movie-poster-img"
+                >
+            </div>
+            <div class="col-md-8">
+                <h2 class="movie-title bg-gradient-primary text-white d-inline-block px-3 py-2 rounded mb-3">
+                    <%= movies.name %>
+                </h2>
+
+                <p class="movie-description text-muted mb-4">
+                    <%= movies.des %>
+                </p>
+
+                <div class="movie-meta mb-4">
+                    <span class="badge bg-gradient-primary me-2">HD</span>
+                    <span class="badge bg-secondary">Movie</span>
                 </div>
 
+                <a href="/" class="btn btn-outline-primary">
+                    ← Back to Movies
+                </a>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
 <%- include('./partials/end.ejs') %>

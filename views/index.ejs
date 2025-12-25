@@ -21,10 +21,10 @@
           <div class="card shadow-sm rounded-4 border-0">
             <div class="card-body">
               <div class="table-responsive rounded-3 overflow-hidden">
-                <table class="table align-middle table-hover">
+                <table class="table align-middle table-hover movie-table">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-muted fw-semibold text-start">Movie</th>
+                      <th class="text-uppercase text-muted fw-semibold">Movie</th>
                       <th class="text-uppercase text-muted fw-semibold">Genre</th>
                       <th class="text-uppercase text-muted fw-semibold">Movie Cover</th>
                       <th class="text-uppercase text-muted fw-semibold">Release Date</th>
@@ -37,41 +37,41 @@
                   <tbody>
                     <% movies.map((movie)=> { %>
                       <tr>
-                        <td class="text-start fw-semibold">
+                        <td class="fw-semibold">
                           <%= movie.name %>
                         </td>
 
-                        <td class="text-start text-muted">
+                        <td class="text-muted">
                           <%= movie.genre %>
                         </td>
 
-                        <td class="text-center">
-                          <img src="/<%= movie.file %>" alt="<%= movie.name %>" class="rounded"
-                            style="width:80px;height:60px;object-fit:cover;">
+                        <td>
+                          <img src="/<%= movie.file %>" alt="<%= movie.name %>" class="table-movie-img">
                         </td>
 
-                        <td class="text-start text-muted">
+                        <td class="text-muted">
                           <%= movie.date %>
                         </td>
 
-                        <td class="text-center">
-                          <span class="badge rounded-pill bg-gradient-primary text-white px-3 py-2 fw-semibold">
+                        <td>
+                          <span class="badge rounded-pill bg-gradient-primary px-3 py-2 fw-semibold">
                             <%= movie.rating %>
                           </span>
                         </td>
 
-                        <td class="text-center">
-                          <a href="/admin/description/<%= movie._id %>" class="fw-semibold text-primary text-decoration-none">
-                            View  
+                        <td>
+                          <a href="/admin/description/<%= movie._id %>"
+                            class="fw-semibold text-primary text-decoration-none">
+                            View
                           </a>
                         </td>
 
-                        <td class="text-center">
-                          <a href="/admin/edit-movie/<%= movie._id %>"
-                            class="badge rounded-pill bg-gradient-primary text-white px-3 py-2 me-1">
+                        <td>
+                          <a href="/admin/edit-movie/<%= movie._id %>" class="action-btn btn-edit me-2">
                             Edit
                           </a>
-                          <a href="/admin/delete-movie/<%= movie._id %>" class="badge rounded-pill bg-gradient-primary text-white px-3 py-2">
+
+                          <a href="/admin/delete-movie/<%= movie._id %>" class="action-btn btn-delete">
                             Delete
                           </a>
                         </td>

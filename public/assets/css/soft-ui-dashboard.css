@@ -24808,6 +24808,16 @@ pre[class*="language-"] {
   cursor: help;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 /*
  * Container style
  */
@@ -24819,3 +24829,163 @@ pre[class*="language-"] {
   -ms-touch-action: auto;
 }
 
+#sidenav-main {
+  background-color: white !important;
+  height: 100vh !important;
+  overflow-y: hidden !important;
+}
+
+#sidenav-main .navbar-collapse {
+  max-height: none !important;
+  overflow-y: hidden !important;
+}
+
+/* remove vh limitation class effect */
+.max-height-vh-100 {
+  max-height: none !important;
+}
+
+/* Light theme movie details */
+.movie-details-section {
+    background: #f4f6f9; /* light grey */
+    min-height: 100vh;
+}
+
+.movie-details-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.movie-poster-img {
+    width: 100%;
+    max-width: 240px; /* medium poster */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.movie-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.movie-description {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.movie-meta .badge {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   MOVIE TABLE ALIGNMENT FIX
+========================= */
+
+.movie-table {
+    table-layout: fixed;
+}
+
+.movie-table th,
+.movie-table td {
+    vertical-align: middle !important;
+    white-space: nowrap;
+}
+
+/* Column alignment (th & td match) */
+
+/* Movie */
+.movie-table th:nth-child(1),
+.movie-table td:nth-child(1) {
+    text-align: left;
+    width: 18%;
+}
+
+/* Genre */
+.movie-table th:nth-child(2),
+.movie-table td:nth-child(2) {
+    text-align: left;
+    width: 15%;
+}
+
+/* Movie Cover */
+.movie-table th:nth-child(3),
+.movie-table td:nth-child(3) {
+    text-align: center;
+    width: 12%;
+}
+
+/* Release Date */
+.movie-table th:nth-child(4),
+.movie-table td:nth-child(4) {
+    text-align: center;
+    width: 14%;
+}
+
+/* Rating */
+.movie-table th:nth-child(5),
+.movie-table td:nth-child(5) {
+    text-align: center;
+    width: 10%;
+}
+
+/* Description */
+.movie-table th:nth-child(6),
+.movie-table td:nth-child(6) {
+    text-align: center;
+    width: 12%;
+}
+
+/* Actions */
+.movie-table th:nth-child(7),
+.movie-table td:nth-child(7) {
+    text-align: center;
+    width: 19%;
+}
+
+/* =========================
+   IMAGE & BUTTON STYLES
+========================= */
+
+.table-movie-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Action buttons */
+.action-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #ffffff;
+    transition: all 0.25s ease;
+}
+
+/* Edit */
+.btn-edit {
+    color: #ffc107;
+    border: 2px solid #ffc107;
+}
+
+.btn-edit:hover {
+    background: #ffc107;
+    color: #ffffff;
+}
+
+/* Delete */
+.btn-delete {
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.btn-delete:hover {
+    background: #dc3545;
+    color: #ffffff;
+}

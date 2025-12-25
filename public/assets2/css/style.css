@@ -178,8 +178,6 @@ body {
   }
 }
 
-
-/* MOVIE SECTION */
 .movies-section {
   background: #12151e;
 }
@@ -199,7 +197,6 @@ body {
   text-decoration: underline;
 }
 
-/* MOVIE CARD */
 .movie-card {
   background: #1b1f2a;
   border-radius: 12px;
@@ -211,7 +208,6 @@ body {
   transform: translateY(-8px);
 }
 
-/* IMAGE */
 .movie-img {
   overflow: hidden;
 }
@@ -227,7 +223,6 @@ body {
   transform: scale(1.1);
 }
 
-/* INFO */
 .movie-info {
   padding: 15px;
   color: #fff;
@@ -244,10 +239,21 @@ body {
   margin-bottom: 8px;
 }
 
-/* META */
 .movie-meta {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   color: #ddd;
 }
+
+.action-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
